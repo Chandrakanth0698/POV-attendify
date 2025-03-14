@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeTrack - Admin</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="dashboard-header">
+      <h1>TimeTrack Admin</h1>
+      <div class="user-info">
+        <span id="admin-name">Loading...</span>
+        <button id="logout-button">Logout</button>
+      </div>
+    </header>
+    
+    <main class="admin-main">
+      <div class="admin-controls">
+        <div class="date-filter">
+          <label for="date-from">From:</label>
+          <input type="date" id="date-from">
+          
+          <label for="date-to">To:</label>
+          <input type="date" id="date-to">
+          
+          <button id="filter-button">Filter</button>
+          <button id="export-csv">Export to CSV</button>
+        </div>
+        
+        <div class="employee-filter">
+          <label for="employee-select">Employee:</label>
+          <select id="employee-select">
+            <option value="all">All Employees</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="data-container">
+        <h2>Employee Time Reports</h2>
+        <div class="summary-stats">
+          <div class="stat-item">
+            <span class="stat-label">Total Hours:</span>
+            <span id="total-hours" class="stat-value">-</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Average Daily Hours:</span>
+            <span id="avg-hours" class="stat-value">-</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Active Employees:</span>
+            <span id="active-employees" class="stat-value">-</span>
+          </div>
+        </div>
+        
+        <div class="report-table-container">
+          <table id="time-report-table" class="report-table">
+            <thead>
+              <tr>
+                <th>Employee</th>
+                <th>Date</th>
+                <th>Clock In</th>
+                <th>Clock Out</th>
+                <th>Duration</th>
+                <th>Status</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="report-table-body">
+              <tr>
+                <td colspan="7">Loading data...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.21.0/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

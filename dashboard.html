@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeTrack - Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="dashboard-header">
+      <h1>TimeTrack</h1>
+      <div class="user-info">
+        <span id="user-name">Loading...</span>
+        <button id="logout-button">Logout</button>
+      </div>
+    </header>
+    
+    <main class="dashboard-main">
+      <div class="time-card">
+        <div class="current-status">
+          <h2>Current Status:</h2>
+          <div id="status-indicator" class="status">
+            <span id="status-text">Loading...</span>
+          </div>
+          <div class="current-time">
+            <span id="current-date">Date</span>
+            <span id="current-time">Time</span>
+          </div>
+        </div>
+        
+        <div class="clock-actions">
+          <button id="clock-in-btn" class="action-btn">Clock In</button>
+          <button id="clock-out-btn" class="action-btn">Clock Out</button>
+        </div>
+        
+        <div class="notes-section">
+          <label for="entry-notes">Notes:</label>
+          <textarea id="entry-notes" placeholder="Add notes about your work (optional)"></textarea>
+        </div>
+      </div>
+      
+      <div class="recent-activity">
+        <h2>Recent Activity</h2>
+        <div id="activity-list">
+          <p>Loading recent entries...</p>
+        </div>
+      </div>
+      
+      <div class="time-summary">
+        <h2>Time Summary</h2>
+        <div class="summary-stats">
+          <div class="stat-item">
+            <span class="stat-label">Today:</span>
+            <span id="today-hours" class="stat-value">-</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">This Week:</span>
+            <span id="week-hours" class="stat-value">-</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">This Month:</span>
+            <span id="month-hours" class="stat-value">-</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.21.0/dist/umd/supabase.min.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
