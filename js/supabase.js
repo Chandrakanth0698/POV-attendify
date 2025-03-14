@@ -1,4 +1,3 @@
-import { createClient } from '@supabase/supabase-js'
 // Initialize Supabase client
 const supabaseUrl = 'https://kwspfktrvjmmtsqrzbic.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt3c3Bma3RydmptbXRzcXJ6YmljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE5NTk5OTEsImV4cCI6MjA1NzUzNTk5MX0.WVfyj94fcUQc-GSaWppHzI-4RycgIga-jU2VedmtAyM';
