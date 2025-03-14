@@ -2,10 +2,8 @@
 const supabaseUrl = 'https://kwspfktrvjmmtsqrzbic.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt3c3Bma3RydmptbXRzcXJ6YmljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE5NTk5OTEsImV4cCI6MjA1NzUzNTk5MX0.WVfyj94fcUQc-GSaWppHzI-4RycgIga-jU2VedmtAyM';
 
-
 // Create a single supabase client for interacting with your database
-
-const supabase =  createClient(supabaseUrl, supabaseKey);
+const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
 // Check if user is authenticated
 async function checkAuth() {
@@ -25,4 +23,4 @@ async function logout() {
   } else {
     console.error('Error logging out:', error.message);
   }
-} 
+}
