@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendify - Employee Time Tracking</title>
+  <meta http-equiv="refresh" content="0;URL='login.html'" />
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    
+    .loading-logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #3498db;
+      margin-bottom: 20px;
+    }
+    
+    .loading-message {
+      font-size: 1.2rem;
+      color: #7f8c8d;
+    }
+    
+    .loading-spinner {
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      border-top: 4px solid #3498db;
+      width: 40px;
+      height: 40px;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-container">
+    <div class="loading-logo">Attendify</div>
+    <div class="loading-spinner"></div>
+    <p class="loading-message">Loading the application...</p>
+    <p>If you are not redirected automatically, <a href="login.html">click here</a>.</p>
+  </div>
+</body>
+</html>
